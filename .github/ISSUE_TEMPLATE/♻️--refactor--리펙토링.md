@@ -1,9 +1,8 @@
 ---
-name: '♻️ [Refactor] 리펙토링'
+name: "♻️ [Refactor] 리펙토링"
 about: 리펙토링을 위한 이슈 템플릿
-title: '♻️ [Refactor]'
-labels: ''
-assignees: YoungjaeRo
+title: "♻️ [Refactor]"
+labels: ""
 ---
 
 ## 📝 개요

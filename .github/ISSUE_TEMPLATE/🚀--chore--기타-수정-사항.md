@@ -2,8 +2,7 @@
 name: "\U0001F680 [Chore] 기타 수정 사항"
 about: 기타 수정 사항을 위한 이슈 템플릿
 title: "\U0001F680 [Chore] "
-labels: ''
-assignees: YoungjaeRo
+labels: ""
 ---
 
 ## 📝 개요
