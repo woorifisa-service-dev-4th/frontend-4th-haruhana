@@ -1,0 +1,29 @@
+name: Build and deploy Haruhana app (production)
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build-and-deploy:
+    runs-on: self-hosted
+    steps:
+      - name: Runner 준비중...
+        run: echo "Runner is ready."
+
+      - name: 코드 체크아웃중...
+        uses: actions/checkout@v3
+
+      - name: 도커 컨테이너 및 이미지 삭제중...
+        run: |
+          docker rm haruhana-app -f || true
+          docker rmi haruhana-app || true
+
+      - name: 도커 이미지 빌드중...
+        run: |
+          docker build -t haruhana-app .
+
+      - name: 도커 컨테이너 실행중...
+        run: |
+          docker run -d --name haruhana-app -p 80:3000 haruhana-app
