@@ -19,20 +19,4 @@
     "eslint": "^9",
     "eslint-config-next": "15.1.6",
     "@eslint/eslintrc": "^3"
-  },
-  "description": "### [prettier-vscode에서-저장만하면-자동으로-적용하는법](how-to-prettier.md)",
-  "main": "index.js",
-  "directories": {
-    "doc": "docs"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/woorifisa-service-dev-4th/frontend-4th-haruhana.git"
-  },
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/woorifisa-service-dev-4th/frontend-4th-haruhana/issues"
-  },
-  "homepage": "https://github.com/woorifisa-service-dev-4th/frontend-4th-haruhana#readme"
-}
+  }
