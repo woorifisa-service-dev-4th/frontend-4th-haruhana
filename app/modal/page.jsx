@@ -6,31 +6,31 @@ import TimeSelector from "./time-selector";
 import QuestionInput from "./question-input";
 
 const Page = () => {
-    const [dummyData, setDummyData] = useState([]);
-    const [category, setCategory] = useState("");
+    const [selectedCategories, setSelectedCategories] = useState([]);
     const [time, setTime] = useState("");
-    const [questionCount, setQuestionCount] = useState(5);
+    const [questionCount, setQuestionCount] = useState("");
 
-    const fetchDummyData = async () => {
-        try {
-            const response = await fetch("/api/dummyData");
-            if (response.ok) {
-                const data = await response.json();
-                setDummyData(data);
-            } else {
-                console.error("Failed to fetch dummy data");
-            }
-        } catch (error) {
-            console.error("Error fetching dummy data:", error);
+
+    const handleCategorySelect = (category) => {
+        if (!selectedCategories.some((c) => c.id === category.id)) {
+            setSelectedCategories((prev) => [...prev, category]);
         }
     };
 
+    const handleCategoryDeselect = (category) => {
+        setSelectedCategories((prev) => prev.filter((c) => c.id !== category.id));
+    };
+
+
+
     const handleSubmit = async () => {
-        const newData = {
-            category,
-            time: time.replace("시", ""),
-            questionCount,
+        const formData = {
+            categories: selectedCategories.map((c) => c.id),
+            time,
+            questionCount: parseInt(questionCount, 10),
         };
+
+        console.log("Form Data:", formData);
 
         try {
             const response = await fetch("/api/dummyData", {
@@ -38,34 +38,31 @@ const Page = () => {
                 headers: {
                     "Content-Type": "application/json",
                 },
-                body: JSON.stringify(newData),
+                body: JSON.stringify(formData),
             });
 
             if (response.ok) {
                 const result = await response.json();
-                alert(`설정 완료:\n카테고리: ${category}\n시간: ${time}\n문제 수: ${questionCount}`);
-                fetchDummyData();
+                console.log("Server Response:", result);
             } else {
-                const errorData = await response.json();
-                alert(`데이터 저장에 실패했습니다.\n사유: ${errorData.message}`);
+                console.error("Failed to send data:", response.status, response.statusText);
             }
         } catch (error) {
-            console.error("데이터 저장 중 오류 발생:", error);
-            alert("데이터 저장 중 오류가 발생했습니다.");
+            console.error("Error sending data:", error);
         }
     };
-
-    useEffect(() => {
-        fetchDummyData();
-    }, []);
 
     return (
         <div className="flex pt-20">
             <div className="bg-white rounded-lg shadow-lg p-7 m-auto w-[450px]">
                 <h1 className="text-2xl font-bold mb-6">학습 설정</h1>
-                <CategorySelector value={category} onChange={setCategory}/>
-                <TimeSelector value={time} onChange={setTime}/>
-                <QuestionInput value={questionCount} onChange={setQuestionCount}/>
+                <CategorySelector
+                    selectedCategories={selectedCategories}
+                    onSelect={handleCategorySelect}
+                    onDeselect={handleCategoryDeselect}
+                />
+                <TimeSelector value={time} onChange={setTime} />
+                <QuestionInput value={questionCount} onChange={setQuestionCount} />
                 <div className="flex justify-center">
                     <button
                         className="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600 w-60 mt-1"

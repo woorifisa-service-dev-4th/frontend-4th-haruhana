@@ -39,8 +39,9 @@ const TimeSelector = ({ value, onChange }) => {
                 <option value="" disabled>
                     학습 알림 시간을 선택하세요
                 </option>
-                <option value="7">7시</option>
-                <option value="8시">8시</option>
+                <option value="7">오전 7시</option>
+                <option value="8">오전 8시</option>
+                <option value="9">오전 9시</option>
             </select>
         </div>
     );
