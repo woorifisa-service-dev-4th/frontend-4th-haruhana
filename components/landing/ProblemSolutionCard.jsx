@@ -1,4 +1,4 @@
-import ArrowIcon from "./ArrowIcon";
+import ArrowIcon from "@/public/ArrowIcon";
 
 export default function ProblemSolutionCard({ imgSrc, quote, description }) {
   return (
