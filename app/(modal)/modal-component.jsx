@@ -7,17 +7,10 @@ const CategorySelector = dynamic(() => import('./category-selector'), { ssr: fal
 const TimeSelector = dynamic(() => import('./time-selector'), { ssr: false });
 const QuestionInput = dynamic(() => import('./question-input'), { ssr: false });
 
-export default function ModalPage() {
-    const [isMounted, setIsMounted] = useState(false);
+export default function ModalComponent() {
     const [selectedCategories, setSelectedCategories] = useState([]);
     const [time, setTime] = useState("");
     const [questionCount, setQuestionCount] = useState("");
-
-    useEffect(() => {
-        setIsMounted(true);
-    }, []);
-
-    if (!isMounted) return null;
 
     const handleCategorySelect = (category) => {
         if (!selectedCategories.some((c) => c.id === category.id)) {
@@ -57,24 +50,22 @@ export default function ModalPage() {
     };
 
     return (
-        <div className="flex pt-20">
-            <div className="bg-white rounded-lg shadow-lg p-7 m-auto w-[450px]">
-                <h1 className="text-2xl font-bold mb-6">학습 설정</h1>
-                <CategorySelector
-                    selectedCategories={selectedCategories}
-                    onSelect={handleCategorySelect}
-                    onDeselect={handleCategoryDeselect}
-                />
-                <TimeSelector value={time} onChange={setTime} />
-                <QuestionInput value={questionCount} onChange={setQuestionCount} />
-                <div className="flex justify-center">
-                    <button
-                        className="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600 w-60 mt-1"
-                        onClick={handleSubmit}
-                    >
-                        설정 완료
-                    </button>
-                </div>
+        <div className="bg-white rounded-lg shadow-lg p-7 m-auto w-[450px]">
+            <h1 className="text-2xl font-bold mb-6">학습 설정</h1>
+            <CategorySelector
+                selectedCategories={selectedCategories}
+                onSelect={handleCategorySelect}
+                onDeselect={handleCategoryDeselect}
+            />
+            <TimeSelector value={time} onChange={setTime} />
+            <QuestionInput value={questionCount} onChange={setQuestionCount} />
+            <div className="flex justify-center">
+                <button
+                    className="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600 w-60 mt-1"
+                    onClick={handleSubmit}
+                >
+                    설정 완료
+                </button>
             </div>
         </div>
     );
