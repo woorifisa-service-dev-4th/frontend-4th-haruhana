@@ -1,24 +1,4 @@
-"use client";
-
-import { useState } from "react";
-
-const QuestionSidebar = () => {
-  // 각 문제에 대한 상태 (O/X 여부)
-  const [questionStatus, setQuestionStatus] = useState([
-    null, // 문제 1
-    null, // 문제 2
-    null, // 문제 3
-    null, // 문제 4
-    null, // 문제 5
-  ]);
-
-  // 테스트용 상태 변경 함수
-  const toggleStatus = (index) => {
-    setQuestionStatus((prev) =>
-      prev.map((status, i) => (i === index ? (status === "O" ? "X" : "O") : status))
-    );
-  };
-
+const QuestionSidebar = ({ questionStatus }) => {
   return (
     <div className="w-1/5 bg-[#E0F4F4] p-4 flex flex-col items-center gap-10">
       {/* 아이콘 (상단) */}
@@ -46,14 +26,21 @@ const QuestionSidebar = () => {
           className="flex flex-col items-center gap-2 w-full"
         >
           <button
-            onClick={() => toggleStatus(index)} // 상태 변경
             className="w-full h-12 bg-gradient-to-b from-[#9CD6D7] to-[#6DB1B2] rounded-full shadow-md flex items-center justify-center text-white font-medium hover:opacity-90 transition"
           >
             {index + 1}
           </button>
           {/* O/X 여부 표시 */}
-          <span className={`text-sm font-medium ${status === "O" ? "text-green-500" : status === "X" ? "text-red-500" : "text-gray-400"}`}>
-            {status || "미정"}
+          <span
+            className={`text-sm font-medium ${
+              status === "O"
+                ? "text-[#60B3D7]"
+                : status === "X"
+                ? "text-[#E592A3]"
+                : "text-gray-400"
+            }`}
+          >
+            {status || "-"}
           </span>
         </div>
       ))}
@@ -62,4 +49,3 @@ const QuestionSidebar = () => {
 };
 
 export default QuestionSidebar;
-

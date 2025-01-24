@@ -1,10 +1,29 @@
-const QuestionArea = () => {
+import { useState } from "react";
+
+const QuestionArea = ({ questionIndex, onSubmit }) => {
+  const [selectedOption, setSelectedOption] = useState(null);
+
+  const handleSubmit = () => {
+    if (selectedOption === null) {
+      onSubmit(false); // 문제를 풀지 않았음
+    } else {
+      const isCorrect = selectedOption === "A. 선택지 1"; // 정답 여부 판단 (예시로 A가 정답)
+      onSubmit(true, isCorrect, questionIndex); // 문제 풀기 완료
+    }
+  };
+
+  const toggleOption = (option) => {
+    if (selectedOption === option) {
+      setSelectedOption(null); // 선택 취소
+    } else {
+      setSelectedOption(option); // 선택 설정
+    }
+  };
+
   return (
     <div className="w-4/5 max-w-6xl bg-white rounded-lg shadow-lg p-8">
-      <h1 className="text-2xl font-bold mb-4">문제 제목</h1>
-      <p className="text-gray-600 mb-6">
-        다음 중 옳은 것을 고르시오.
-      </p>
+      <h1 className="text-2xl font-bold mb-4">문제 {questionIndex + 1}</h1>
+      <p className="text-gray-600 mb-6">다음 중 옳은 것을 고르시오.</p>
 
       {/* Options */}
       <div className="flex flex-col gap-4">
@@ -12,12 +31,27 @@ const QuestionArea = () => {
           (option, index) => (
             <button
               key={index}
-              className="w-full text-left px-4 py-3 border border-gray-300 rounded-lg hover:bg-gray-100 transition"
+              onClick={() => toggleOption(option)}
+              className={`w-full text-left px-4 py-3 border rounded-lg transition ${
+                selectedOption === option
+                  ? "bg-[#6DB1B2] text-white"
+                  : "border-gray-300 hover:bg-gray-100"
+              }`}
             >
               {option}
             </button>
           )
         )}
+      </div>
+
+      {/* Submit Button */}
+      <div className="flex justify-end mt-6">
+        <button
+          onClick={handleSubmit}
+          className="px-6 py-3 bg-[#6DB1B2] text-white rounded-md shadow-md hover:bg-[#5AA0A1] transition"
+        >
+          제출
+        </button>
       </div>
     </div>
   );
