@@ -1,6 +1,6 @@
-import Title from "@/components/lending/Title";
-import ProblemSolutionCard from "@/components/lending/ProblemSolutionCard";
-import TextAndButtonCallToStart from "@/components/lending/TextAndButtonCallToStart";
+import Title from "@/components/landing/Title";
+import ProblemSolutionCard from "@/components/landing/ProblemSolutionCard";
+import TextAndButtonCallToStart from "@/components/landing/TextAndButtonCallToStart";
 import "../globals.css";
 
 export default function LendingPage() {
