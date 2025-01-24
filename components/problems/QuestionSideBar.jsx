@@ -1,4 +1,9 @@
-const QuestionSidebar = ({ questionStatus }) => {
+import { useQuestionContext } from "@/contexts/QuestionContext";
+
+const QuestionSidebar = () => {
+
+  const { questionStatus } = useQuestionContext();
+
   return (
     <div className="w-1/5 bg-[#E0F4F4] p-4 flex flex-col items-center gap-10">
       {/* 아이콘 (상단) */}

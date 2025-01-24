@@ -1,6 +1,6 @@
 import "../globals.css";
 
-export default function RootLayout({ children }) {
+export default function QuestionLayout({ children }) {
   return (
     <html lang="en">
       <body>
