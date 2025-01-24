@@ -1,14 +1,15 @@
-"use client"
+"use client";
 
 import React, { useState, useEffect } from "react";
 import CategorySelector from "./category-selector";
 import TimeSelector from "./time-selector";
 import QuestionInput from "./question-input";
 
-const Page = () => {
+const modalPage = () => {
     const [selectedCategories, setSelectedCategories] = useState([]);
     const [time, setTime] = useState("");
     const [questionCount, setQuestionCount] = useState("");
+    const [isOpen, setIsOpen] = useState(false);
 
 
     const handleCategorySelect = (category) => {
@@ -76,4 +77,4 @@ const Page = () => {
     );
 };
 
-export default Page;
+export default modalPage;

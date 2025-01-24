@@ -1,16 +1,15 @@
 "use client";
 
-import React, { useState } from 'react';
+import React, { useMemo } from 'react';
 
 const categories = [
-    { name: '백엔드', icon: 'fas fa-server' },
-    { name: '프론트엔드', icon: 'fas fa-code' },
-    { name: '네트워크', icon: 'fas fa-network-wired' },
-    { name: '데이터베이스', icon: 'fas fa-database' },
-    { name: '운영체제', icon: 'fas fa-window-restore' },
-    { name: '자료구조', icon: 'fas fa-cubes' },
+    { id : 1, name: '백엔드', icon: 'fas fa-server' },
+    { id : 2, name: '프론트엔드', icon: 'fas fa-code' },
+    { id : 3, name: '네트워크', icon: 'fas fa-network-wired' },
+    { id : 4, name: '데이터베이스', icon: 'fas fa-database' },
+    { id : 5, name: '운영체제', icon: 'fas fa-window-restore' },
+    { id : 6, name: '자료구조', icon: 'fas fa-cubes' },
 ];
-
 
 const CategoryButtons = ({ availableCategories, onSelect }) => {
     return (
@@ -46,32 +45,34 @@ const SelectedCategories = ({ selectedCategories, onDeselect }) => {
     );
 };
 
-const Page = () => {
-    const [selectedCategories, setSelectedCategories] = useState([]);
+// CategorySelector 컴포넌트 선언
+const CategorySelector = ({ selectedCategories, onSelect, onDeselect }) => {
+    const availableCategories = useMemo(() => {
+        return categories.filter(
+            (category) => !selectedCategories.some((selected) => selected.id === category.id)
+        );
+    }, [selectedCategories]);
 
-    const handleSelectCategory = category => {
-        setSelectedCategories([...selectedCategories, category]);
-    };
-
-    const handleDeselectCategory = category => {
-        setSelectedCategories(selectedCategories.filter(item => item.name !== category.name));
-    };
-
-    const availableCategories = categories.filter(category => !selectedCategories.some(selected => selected.name === category.name));
 
     return (
-        <div className="flex flex-col items-center bg-gray-100 p-3 mb-3 ">
-            <div className="bg-white rounded-lg shadow p-4 mb-4 w-full max-w-[800px] ">
+        <div>
+            <div className="bg-white rounded-lg shadow p-4 mb-4 w-full max-w-[800px]">
                 <h1 className="text-lg font-bold mb-3">선택된 카테고리</h1>
-                <SelectedCategories selectedCategories={selectedCategories} onDeselect={handleDeselectCategory}/>
+                <SelectedCategories
+                    selectedCategories={selectedCategories}
+                    onDeselect={onDeselect}
+                />
             </div>
             <div className="bg-white rounded-lg shadow p-4 w-full mb-4 max-w-[800px]">
                 <h1 className="text-lg font-bold mb-3">카테고리 선택</h1>
-                <CategoryButtons availableCategories={availableCategories} onSelect={handleSelectCategory}/>
+                <CategoryButtons
+                    availableCategories={availableCategories}
+                    onSelect={onSelect}
+                />
             </div>
         </div>
     );
 };
 
-export default Page;
 
+export default CategorySelector;
