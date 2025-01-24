@@ -16,7 +16,7 @@ export const QuestionProvider = ({ children }) => {
 
     setQuestionStatus((prev) =>
       prev.map((status, index) =>
-        index === questionIndex ? (isCorrect ? "O" : "X") : status
+        index === questionIndex ? '☑️' : status
       )
     );
   };
