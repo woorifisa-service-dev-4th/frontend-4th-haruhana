@@ -2,7 +2,7 @@ export default function PromotionText() {
   return (
     <div>
       <p
-        className="text-white text-4xl font-bold drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.4)]"
+        className="text-white text-3xl font-bold drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.4)]"
         style={{
           WebkitTextStroke: "0.2px gray",
           textShadow: "1px 1px 1px rgba(0, 0, 0, 0.3)",
@@ -13,7 +13,7 @@ export default function PromotionText() {
         완벽한 솔루션!
       </p>
       <p
-        className="text-white text-4xl mt-16 font-medium drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.4)]"
+        className="text-white text-3xl mt-16 font-medium drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.4)]"
         style={{
           WebkitTextStroke: "0.2px gray",
           textShadow: "1px 1px 1px rgba(0, 0, 0, 0.3)",
