@@ -10,7 +10,7 @@ const QuestionArea = ({ questionIndex }) => {
   };
  
   const submit = () => {
-    handleSubmit(selectedAnswer !== null, selectedAnswer === "A. 선택지 1", questionIndex);
+    handleSubmit(selectedAnswer !== null, questionIndex);
   };
  
   return (
@@ -47,5 +47,5 @@ const QuestionArea = ({ questionIndex }) => {
     </div>
   );
  };
- 
+
  export default QuestionArea;

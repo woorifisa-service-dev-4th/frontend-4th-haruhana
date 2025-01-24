@@ -17,7 +17,7 @@ const QuestionSidebar = () => {
            {index + 1}
          </button>
          <span className="text-sm font-medium text-gray-500">
-           {status === "selected" ? "☑️" : "-"}
+          {status === "selected" ? "☑️" : "-"}
          </span>
        </div>
      ))}
