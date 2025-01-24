@@ -14,14 +14,14 @@ export const QuestionProvider = ({ children }) => {
       return;
     }
 
-    // 현재 상태가 selected면 null로, 아니면 selected로 토글
-    setQuestionStatus((prev) =>
-      prev.map((status, index) =>
-        index === questionIndex ? 
-        (status === "selected" ? "-" : "selected") : 
-        status
-      )
-    );
+    // 현재 상태가 selected면 "-"로, 아니면 selected로 토글
+    // setQuestionStatus((prev) =>
+    //   prev.map((status, index) =>
+    //     index === questionIndex ? 
+    //     (status === "selected" ? "-" : "selected") : 
+    //     (status === "selected" ? "-" : status)
+    //   )
+    // );
   };
   
   const closeSelectedMissModal = () => setSelectedMissModal(false);
