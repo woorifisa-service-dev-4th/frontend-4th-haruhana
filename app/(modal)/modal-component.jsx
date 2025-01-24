@@ -1,16 +1,23 @@
-"use client";
+'use client';
 
 import React, { useState, useEffect } from "react";
-import CategorySelector from "./category-selector";
-import TimeSelector from "./time-selector";
-import QuestionInput from "./question-input";
+import dynamic from 'next/dynamic';
 
-const modalPage = () => {
+const CategorySelector = dynamic(() => import('./category-selector'), { ssr: false });
+const TimeSelector = dynamic(() => import('./time-selector'), { ssr: false });
+const QuestionInput = dynamic(() => import('./question-input'), { ssr: false });
+
+export default function ModalPage() {
+    const [isMounted, setIsMounted] = useState(false);
     const [selectedCategories, setSelectedCategories] = useState([]);
     const [time, setTime] = useState("");
     const [questionCount, setQuestionCount] = useState("");
-    const [isOpen, setIsOpen] = useState(false);
 
+    useEffect(() => {
+        setIsMounted(true);
+    }, []);
+
+    if (!isMounted) return null;
 
     const handleCategorySelect = (category) => {
         if (!selectedCategories.some((c) => c.id === category.id)) {
@@ -22,16 +29,12 @@ const modalPage = () => {
         setSelectedCategories((prev) => prev.filter((c) => c.id !== category.id));
     };
 
-
-
     const handleSubmit = async () => {
         const formData = {
             categories: selectedCategories.map((c) => c.id),
             time,
             questionCount: parseInt(questionCount, 10),
         };
-
-        console.log("Form Data:", formData);
 
         try {
             const response = await fetch("/api/dummyData", {
@@ -75,6 +78,4 @@ const modalPage = () => {
             </div>
         </div>
     );
-};
-
-export default modalPage;
+}
