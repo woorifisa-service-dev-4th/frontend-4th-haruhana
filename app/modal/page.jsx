@@ -1,8 +1,7 @@
 'use client';
 
 import React, { useState, useEffect } from "react";
-import dynamic from 'next/dynamic';
-import ModalComponent from './ModalComponent';
+import ModalComponent from './modal-component';
 
 export default function ModalPage() {
     const [isMounted, setIsMounted] = useState(false);
