@@ -4,7 +4,6 @@ import QuestionSidebar from "@/components/problems/QuestionSideBar";
 import QuestionArea from "@/components/problems/QuestionArea";
 import QuestionHeader from "@/components/problems/QuestionHeader";
 import { QuestionProvider } from "@/contexts/QuestionContext";
-import SelectMissModal from "@/ui/SelectMissModal";
 import "../globals.css";
 
 export default function QuestionPage() {
@@ -17,7 +16,6 @@ export default function QuestionPage() {
           <QuestionArea questionIndex={0} />
         </div>
       </div>
-      <SelectMissModal />
     </QuestionProvider>
   );
 }
