@@ -1,6 +1,7 @@
 import React from 'react';
 
-const ProblemList = ({ problems, filters = { category: '', level: '' } }) => { // 기본값 설정
+const ProblemList = ({ problems, filters }) => {
+    // 필터링 로직
     const filteredProblems = problems.filter(problem =>
         (filters.category ? problem.category === filters.category : true) &&
         (filters.level ? problem.level === filters.level : true)

@@ -53,13 +53,7 @@ const ProblemListPage = () => {
     };
 
     const handleFilterChange = (filterType, value) => {
-        setFilters({ ...filters, [filterType]: value });
-        // 필터링 기능 구현, 처음엔 모든 문제 보여줌.
-        if (filterType === 'category') {
-            setProblems(initialProblems.filter(problem => problem.category === value));
-        } else {
-            setProblems(initialProblems.filter(problem => problem.level === value));
-        }
+        setFilters(prev => ({ ...prev, [filterType]: value }));
     };
 
     return (
@@ -68,7 +62,7 @@ const ProblemListPage = () => {
             <div className="p-5 max-w-4xl mx-auto text-center">
                 <SearchBar onSearch={() => {}} />
                 <FilterBar onFilterChange={handleFilterChange} />
-                <ProblemList problems={problems} filter={filters}  />
+                <ProblemList problems={initialProblems} filters={filters} />{/* 필터링된 문제 전달 */}
             </div>
         </div>
     );
