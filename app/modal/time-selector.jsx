@@ -26,9 +26,10 @@ const TimeSelector = ({ value, onChange }) => {
 
     return (
         <div className="mb-5">
-            <label htmlFor="time" className="block text-lg font-bold p-2">
+            <label htmlFor="time" className="block text-lg font-bold p-2 text-left">
                 학습 시간
             </label>
+            <div className="text-left">
             <select
                 id="time"
                 ref={selectRef}
@@ -43,6 +44,7 @@ const TimeSelector = ({ value, onChange }) => {
                 <option value="8">오전 8시</option>
                 <option value="9">오전 9시</option>
             </select>
+            </div>
         </div>
     );
 };

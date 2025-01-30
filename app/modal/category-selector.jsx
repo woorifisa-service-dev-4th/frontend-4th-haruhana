@@ -57,14 +57,14 @@ const CategorySelector = ({ selectedCategories, onSelect, onDeselect }) => {
     return (
         <div>
             <div className="bg-white rounded-lg shadow p-4 mb-4 w-full max-w-[800px]">
-                <h1 className="text-lg font-bold mb-3">선택된 카테고리</h1>
+                <h1 className="text-lg font-bold mb-3 text-left">선택된 카테고리</h1>
                 <SelectedCategories
                     selectedCategories={selectedCategories}
                     onDeselect={onDeselect}
                 />
             </div>
             <div className="bg-white rounded-lg shadow p-4 w-full mb-4 max-w-[800px]">
-                <h1 className="text-lg font-bold mb-3">카테고리 선택</h1>
+                <h1 className="text-lg font-bold mb-3 text-left">카테고리 선택</h1>
                 <CategoryButtons
                     availableCategories={availableCategories}
                     onSelect={onSelect}

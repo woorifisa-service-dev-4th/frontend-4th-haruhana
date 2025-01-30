@@ -1,72 +1,22 @@
-'use client';
+import React from "react";
+import ModalDetail from './modal-detail';
 
-import React, { useState } from "react";
-import dynamic from 'next/dynamic';
-
-const CategorySelector = dynamic(() => import('./category-selector'), { ssr: false });
-const TimeSelector = dynamic(() => import('./time-selector'), { ssr: false });
-const QuestionInput = dynamic(() => import('./question-input'), { ssr: false });
-
-export default function ModalComponent() {
-    const [selectedCategories, setSelectedCategories] = useState([]);
-    const [time, setTime] = useState("");
-    const [questionCount, setQuestionCount] = useState("");
-
-    const handleCategorySelect = (category) => {
-        if (!selectedCategories.some((c) => c.id === category.id)) {
-            setSelectedCategories((prev) => [...prev, category]);
-        }
-    };
-
-    const handleCategoryDeselect = (category) => {
-        setSelectedCategories((prev) => prev.filter((c) => c.id !== category.id));
-    };
-
-    const handleSubmit = async () => {
-        const formData = {
-            categories: selectedCategories.map((c) => c.id),
-            time,
-            questionCount: parseInt(questionCount, 10),
-        };
-
-        try {
-            const response = await fetch("/api/dummyData", {
-                method: "POST",
-                headers: {
-                    "Content-Type": "application/json",
-                },
-                body: JSON.stringify(formData),
-            });
-
-            if (response.ok) {
-                const result = await response.json();
-                console.log("Server Response:", result);
-            } else {
-                console.error("Failed to send data:", response.status, response.statusText);
-            }
-        } catch (error) {
-            console.error("Error sending data:", error);
-        }
-    };
-
+export default function ModalComponent({ onClose, hovered }) {
     return (
-        <div className="bg-white rounded-lg shadow-lg p-7 m-auto w-[450px]">
-            <h1 className="text-2xl font-bold mb-6">학습 설정</h1>
-            <CategorySelector
-                selectedCategories={selectedCategories}
-                onSelect={handleCategorySelect}
-                onDeselect={handleCategoryDeselect}
-            />
-            <TimeSelector value={time} onChange={setTime} />
-            <QuestionInput value={questionCount} onChange={setQuestionCount} />
-            <div className="flex justify-center">
+        <div className="fixed inset-0 flex items-center justify-center p-4 z-50">
+            <div className="bg-white rounded-lg shadow-lg max-w-md mx-auto p-6 space-y-4 relative z-50">
                 <button
-                    className="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600 w-60 mt-1"
-                    onClick={handleSubmit}
+                    onClick={onClose}
+                    className="absolute top-4 right-4 px-4 py-2 rounded-lg shadow-md transition-all duration-300 ease-in-out text-[#5AA0A1]"
                 >
-                    설정 완료
+                    X
                 </button>
+                <ModalDetail />
             </div>
+            <div
+                className="fixed inset-0 bg-black opacity-50"
+                onClick={onClose}
+            ></div>
         </div>
     );
 }

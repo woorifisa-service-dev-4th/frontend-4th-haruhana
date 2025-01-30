@@ -8,7 +8,7 @@ const QuestionInput = ({ value, onChange }) => {
     }, [value, onChange]); // value 또는 onChange 함수가 변경될 때마다 이 effect를 재실행
 
     return (
-        <div className="mb-10">
+        <div className="mb-10 text-left">
             <label htmlFor="question-count" className="block text-lg font-bold p-2">
                 문제 수
             </label>
