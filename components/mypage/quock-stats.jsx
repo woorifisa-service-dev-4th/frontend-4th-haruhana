@@ -25,7 +25,7 @@ const QuickStats = ({ user }) => {
                 </CardContent>
             </Card>
 
-            <Card className="hover:shadow-lg transition-shadow cursor-pointer">
+            <Card className="hover:shadow-lg transition-shadow cursor-pointer" onClick={() => handleCardClick('/problem-list')}>
                 <CardContent className="p-6 flex items-center gap-4">
                     <div className="p-3 rounded-full bg-[#6DB1B2]/10">
                         <ListChecks className="w-6 h-6 text-[#6DB1B2]" />
@@ -37,7 +37,8 @@ const QuickStats = ({ user }) => {
                 </CardContent>
             </Card>
 
-            <Card className="hover:shadow-lg transition-shadow cursor-pointer">
+
+            <Card className="hover:shadow-lg transition-shadow cursor-pointer" onClick={() => handleCardClick('/questions')}>
                 <CardContent className="p-6 flex items-center gap-4">
                     <div className="p-3 rounded-full bg-[#6DB1B2]/10">
                         <Calendar className="w-6 h-6 text-[#6DB1B2]" />
@@ -49,7 +50,7 @@ const QuickStats = ({ user }) => {
                 </CardContent>
             </Card>
 
-            <Card className="hover:shadow-lg transition-shadow cursor-pointer">
+            <Card className="hover:shadow-lg transition-shadow cursor-pointer" >
                 <CardContent className="p-6 flex items-center gap-4">
                     <div className="p-3 rounded-full bg-[#6DB1B2]/10">
                         <CheckCircle className="w-6 h-6 text-[#6DB1B2]" />
