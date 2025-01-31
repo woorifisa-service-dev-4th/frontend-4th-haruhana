@@ -5,7 +5,7 @@ import { Button } from '../ui/button';
 const StudyCalendar = () => {
     const studiedDays = [1, 3, 5, 7, 8, 9, 10, 12, 15, 16, 20, 21, 22, 23];
     const days = Array.from({ length: 31 }, (_, i) => i + 1);
-    const today = new Date().getDate(); // 현재 날짜에서 일자를 추출
+    const today = new Date(); // 현재 날짜에서 일자를 추출
 
     const year = 2025;
     const month = 0; // 1월은 0

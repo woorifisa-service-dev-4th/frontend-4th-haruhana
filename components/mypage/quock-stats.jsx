@@ -1,11 +1,19 @@
+'use client';
+
 import React from 'react';
 import { BarChart2, ListChecks, Calendar, CheckCircle } from 'lucide-react';
 import { Card, CardContent } from '@/components/ui/card';
 
-const QuickStats = () => {
+
+const QuickStats = ({ user }) => {
+    const handleCardClick = (path) => {
+        console.log(`Navigating to ${path}`);
+        window.location.href = path;
+    };
+
     return (
         <div className="space-y-4">
-            <Card className="hover:shadow-lg transition-shadow cursor-pointer">
+            <Card className="hover:shadow-lg transition-shadow cursor-pointer" onClick={() => handleCardClick('/statistics')}>
                 <CardContent className="p-6 flex items-center gap-4">
                     <div className="p-3 rounded-full bg-[#6DB1B2]/10">
                         <BarChart2 className="w-6 h-6 text-[#6DB1B2]" />
