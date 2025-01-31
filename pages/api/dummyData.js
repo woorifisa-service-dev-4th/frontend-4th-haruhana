@@ -1,6 +1,6 @@
 let dummyData = [
-    { category: "1", time: "7", questionCount: 1 },
-    { category: "2", time: "8", questionCount: 5 },
+    { category: [1,2], time: "7", questionCount: 1 },
+    { category: [2], time: "8", questionCount: 5 },
 ];
 
 export default function handler(req, res) {
