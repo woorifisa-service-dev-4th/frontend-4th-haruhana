@@ -11,8 +11,11 @@ import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 const StudyCalendar = () => {
     const studiedDays = [1, 3, 5, 7, 8, 9, 10, 12, 15, 16, 20, 21, 22, 23];
     const days = Array.from({ length: 31 }, (_, i) => i + 1);
-    const today = new Date().getDate(); // 현재 날짜에서 일자를 추출
+    const today = new Date(); // 현재 날짜에서 일자를 추출
 
+    const year = 2025;
+    const month = 0; // 1월은 0
+    const firstDayOfMonth = new Date(year, month, 1).getDay(); // 2025년 1월 1일의 요일 (0: 일요일, 1: 월요일, ...)
 
     return (
         <div className="w-full">
@@ -47,7 +50,9 @@ const StudyCalendar = () => {
                 </div>
 
                 <div className="grid grid-cols-7">
-                    <div className="border-r border-b p-3"></div>
+                    {Array.from({ length: firstDayOfMonth }).map((_, idx) => (
+                        <div key={`empty-${idx}`} className="border-r border-b p-3"></div>
+                    ))}
                     {days.map((day) => {
                         const isStudied = studiedDays.includes(day);
                         const isToday = day === today;
@@ -57,7 +62,7 @@ const StudyCalendar = () => {
                                 key={day.toString()}
                                 className={`
                   p-3 aspect-square flex items-center justify-center relative
-                  ${day % 7 !== 0 ? 'border-r' : ''} 
+                  ${(firstDayOfMonth + day - 1) % 7 !== 6 ? 'border-r' : ''} 
                   border-b
                   ${isStudied ? 'bg-[#6DB1B2]/5' : 'hover:bg-gray-50'} 
                   ${isToday ? 'ring-2 ring-inset ring-[#6DB1B2]' : ''}
