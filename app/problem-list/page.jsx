@@ -5,6 +5,7 @@ import SearchBar from '../../components/problem-list/searchBar';
 import FilterBar from '../../components/problem-list/filterBar';
 import ProblemList from '../../components/problem-list/problemList';
 import Title from '../../components/landing/Title';
+import {Bell, Settings} from "lucide-react";
 
 const ProblemListPage = () => {
     // 초기 더미 데이터
@@ -57,12 +58,25 @@ const ProblemListPage = () => {
     };
 
     return (
-        <div>
-            <Title />
+        <div className="min-h-screen bg-gray-50">
+            {/* Header */}
+            <header className="bg-[#6DB1B2] text-white py-6">
+                <div className="container mx-auto px-4">
+                    <div className="flex items-center justify-between">
+                        <h1 className="text-2xl font-bold">문제 리스트</h1>
+                        <div className="flex gap-4">
+                            <Bell className="w-6 h-6 cursor-pointer hover:opacity-80"/>
+                            <Settings className="w-6 h-6 cursor-pointer hover:opacity-80"/>
+                        </div>
+                    </div>
+                </div>
+            </header>
+            <Title/>
             <div className="p-5 max-w-4xl mx-auto text-center">
-                <SearchBar onSearch={() => {}} />
-                <FilterBar onFilterChange={handleFilterChange} />
-                <ProblemList problems={initialProblems} filters={filters} />{/* 필터링된 문제 전달 */}
+                <SearchBar onSearch={() => {
+                }}/>
+                <FilterBar onFilterChange={handleFilterChange}/>
+                <ProblemList problems={initialProblems} filters={filters}/>{/* 필터링된 문제 전달 */}
             </div>
         </div>
     );
