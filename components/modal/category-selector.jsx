@@ -17,9 +17,10 @@ const CategoryButtons = ({ availableCategories, onSelect }) => {
             {availableCategories.map(category => (
                 <button
                     key={category.name}
-                    className="flex justify-center items-center  px-2 py-2 rounded-full bg-gray-400 text-white font-medium"
+                    className="flex justify-center items-center px-4 py-3 rounded-full bg-gray-400 text-white font-medium"
                     onClick={() => onSelect(category)}
-                ><i className={`${category.icon}`}></i>
+                >
+                    <i className={`${category.icon}`}></i>
                     {category.name}
                 </button>
             ))}
@@ -27,32 +28,29 @@ const CategoryButtons = ({ availableCategories, onSelect }) => {
     );
 };
 
-
 const SelectedCategories = ({ selectedCategories, onDeselect }) => {
     return (
-        <div className="flex flex-wrap  gap-2 p-6 ">
-            {selectedCategories.map((category, index) => (
-                <div key={index} className="flex items-center gap-2 px-4 py-2 rounded-full bg-gray-300 text-white font-medium shadow">
-                    <span>{category.name}</span>
-                    <button
-                        onClick={() => onDeselect(category)}
-                    >
-                        <i className="fas fa-times-circle">X</i>
-                    </button>
-                </div>
+        <div className="flex flex-wrap gap-2 p-6">
+            {selectedCategories.map(category => (
+                <button
+                    key={category.name}
+                    className="flex justify-center items-center px-4 py-3 rounded-full bg-[#6DB1B2] text-white font-medium"
+                    onClick={() => onDeselect(category)}
+                >
+                    <i className={`${category.icon}`}></i>
+                    {category.name}
+                </button>
             ))}
         </div>
     );
 };
 
-// CategorySelector 컴포넌트 선언
 const CategorySelector = ({ selectedCategories, onSelect, onDeselect }) => {
     const availableCategories = useMemo(() => {
         return categories.filter(
-            (category) => !selectedCategories.some((selected) => selected.id === category.id)
+            category => !selectedCategories.some(selected => selected.id === category.id)
         );
     }, [selectedCategories]);
-
 
     return (
         <div>
@@ -73,6 +71,5 @@ const CategorySelector = ({ selectedCategories, onSelect, onDeselect }) => {
         </div>
     );
 };
-
 
 export default CategorySelector;
