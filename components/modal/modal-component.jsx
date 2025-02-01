@@ -22,6 +22,11 @@ export default function ModalComponent() {
         setSelectedCategories((prev) => prev.filter((c) => c.id !== category.id));
     };
 
+    const handleCardClick = (path) => {
+        console.log(`Navigating to ${path}`);
+        window.location.href = path;
+    };
+
     const handleSubmit = async () => {
         const formData = {
             categories: selectedCategories.map((c) => c.id),
@@ -41,7 +46,8 @@ export default function ModalComponent() {
             if (response.ok) {
                 const result = await response.json();
                 console.log("Server Response:", result);
-            } else {
+                handleCardClick('/mypage');
+            }else {
                 console.error("Failed to send data:", response.status, response.statusText);
             }
         } catch (error) {
@@ -61,7 +67,7 @@ export default function ModalComponent() {
             <QuestionInput value={questionCount} onChange={setQuestionCount} />
             <div className="flex justify-center">
                 <button
-                    className="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600 w-60 mt-1"
+                    className="bg-[#6DB1B2] text-white px-4 py-2 rounded-md hover:bg-[#6DB1B2] w-60 mt-1"
                     onClick={handleSubmit}
                 >
                     설정 완료

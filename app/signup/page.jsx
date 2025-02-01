@@ -9,6 +9,11 @@ const SignupPage = () => {
     const [password, setPassword] = useState('');
     const [confirmPassword, setConfirmPassword] = useState('');
 
+    const handleCardClick = (path) => {
+        console.log(`Navigating to ${path}`);
+        window.location.href = path;
+    };
+
     const handleSignup = async (event) => {
         event.preventDefault();
         if (password !== confirmPassword) {
@@ -27,7 +32,7 @@ const SignupPage = () => {
         });
 
         if (res.ok) {
-            alert("Signup successful!");
+            handleCardClick('../modal');
         } else {
             const data = await res.json();
             alert(data.message);

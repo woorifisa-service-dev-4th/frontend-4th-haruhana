@@ -1,8 +1,10 @@
+'use client';
+
 import React from 'react';
 
-export const Card = ({ children, className }) => {
+export const Card = ({ children, className, onClick }) => {
     return (
-        <div className={`bg-white shadow rounded-lg ${className}`}>
+        <div className={`bg-white shadow rounded-lg ${className}`} onClick={onClick}>
             {children}
         </div>
     );
