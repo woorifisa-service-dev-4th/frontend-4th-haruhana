@@ -21,7 +21,7 @@ const ProblemListPage = () => {
           throw new Error("Failed to fetch problems");
         }
         const data = await response.json();
-        setProblems(data);
+        setProblems(data.data.problems);
       } catch (err) {
         setError(err.message);
       } finally {
