@@ -12,13 +12,26 @@ jobs:
       - name: Runner 준비중...
         run: echo "Runner is ready."
 
+      - name: 디스크 공간 확인 (정리 전)
+        run: df -h
+
       - name: 코드 체크아웃중...
         uses: actions/checkout@v3
+
+      - name: Docker 시스템 정리
+        run: |
+          docker system prune -af
+          docker volume prune -f
+          docker builder prune -af
+
+      - name: 디스크 공간 확인 (정리 후)
+        run: df -h
 
       - name: 도커 컨테이너 및 이미지 삭제중...
         run: |
           docker rm haruhana-app-test -f || true
           docker rmi haruhana-app-test || true
+          docker image prune -af
 
       - name: 도커 이미지 빌드중...
         run: |

@@ -24,6 +24,11 @@ export default function ModalComponent() {
         setSelectedCategories((prev) => prev.filter((c) => c.id !== category.id));
     };
 
+    const handleCardClick = (path) => {
+        console.log(`Navigating to ${path}`);
+        window.location.href = path;
+    };
+
     const handleSubmit = async () => {
         const formData = {
             categories: selectedCategories.map((c) => c.id),
@@ -43,7 +48,8 @@ export default function ModalComponent() {
             if (response.ok) {
                 const result = await response.json();
                 console.log("Server Response:", result);
-            } else {
+                handleCardClick('/mypage');
+            }else {
                 console.error("Failed to send data:", response.status, response.statusText);
             }
         } catch (error) {

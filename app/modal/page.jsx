@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect } from "react";
 import ModalComponent from '../../components/modal/modal-component';
+import {Bell, Settings} from "lucide-react";
 
 export default function ModalPage() {
     const [isMounted, setIsMounted] = useState(false);
@@ -22,7 +23,7 @@ export default function ModalPage() {
                     </div>
                 </div>
             </header>
-                        <ModalComponent/>
-
-        </div> );
+            <ModalComponent/>
+        </div>
+    );
 }
