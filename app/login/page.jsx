@@ -20,8 +20,8 @@ const LoginPage = () => {
 
         if (res.ok) {
             const data = await res.json();
-            alert("Login successful!");
             // 사용자 정보를 저장하고 필요한 페이지로 이동
+            window.location.href = "/mypage"; // 로그인 성공 시 마이페이지로 이동
         } else {
             const data = await res.json();
             alert(data.message);
