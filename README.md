@@ -28,7 +28,61 @@ HaruHana는 웹 개발과 CS 공부를 더 쉽고 재미있게 할 수 있도록
 
 # 📦 폴더 구조
 
-<img width="500"  src="/docs/folderstructure.png" />
+```text
+.
+├── Dockerfile               # 도커 이미지 빌드 파일
+├── README.md                # 프로젝트 소개 및 설명 파일
+├── app                      # Next.js 프로젝트 폴더. 전체 프로젝트의 루트 폴더
+│   ├── (landing)              # 랜딩 페이지
+│   ├── api                    # API 요청 관련 폴더
+│   ├── login                  # 로그인 페이지
+│   ├── logout                 # 로그아웃 페이지
+│   ├── mypage                 # 마이페이지
+│   ├── problem-list           # 문제 리스트 페이지
+│   ├── questions              # 문제 페이지
+│   ├── signup                 # 회원가입 페이지
+│   ├── statistics             # 통계 페이지
+│   ├── layout.js              # 레이아웃 파일
+│   └── globals.css            # 전역 CSS 파일
+│      
+├── components               # 재사용 가능한 컴포넌트 관련 폴더
+│   ├── chart                  # 차트 컴포넌트
+│   ├── landing                # 랜딩 페이지 관련 컴포넌트
+│   ├── modal                  # 모달 관련 컴포넌트
+│   ├── mypage                 # 마이페이지 관련 컴포넌트
+│   ├── problem-list           # 문제 리스트 페이지 관련 컴포넌트
+│   ├── problems               # 문제 페이지 관련 컴포넌트
+│   ├── statistics             # 통계 페이지 관련 컴포넌트
+│   └── ui                     # 공통 UI 컴포넌트
+│      
+├── constants                # 상수 관련 폴더
+│   └── chartColors.js         # 차트 색상 상수 파일
+│                                 
+├── contexts                 # Context API 관련 폴더
+│   └── QuestionContext.jsx    # 문제 관련 Context API 파일
+│
+├── data                     # 데이터 관련 폴더
+│   └── user.js                # 사용자 정보 데이터 파일
+│
+├── docs                     # README.md에 사용되는 이미지 파일을 저장하는 폴더
+├── eslint.config.mjs        # ESLint 설정 파일
+├── jsconfig.json            # JSConfig 설정 파일
+├── next.config.mjs          # Next.js 설정 파일
+├── node_modules             # Node.js 모듈 폴더
+├── package.json             # 프로젝트 정보 및 의존성 관리 파일
+├── pages                    # Next.js 페이지 라우트
+│   └── api                    # API 엔드포인트
+│
+├── pnpm-lock.yaml           # pnpm 패키지 의존성 관리 파일
+├── postcss.config.mjs       # PostCSS 설정 파일
+├── public                   # 이미지, 아이콘 등 정적 파일을 저장하는 폴더
+├── styles                   # 전역 CSS 파일을 저장하는 폴더
+│   └── react-grid.css         # React Grid 스타일 파일 (차트 페이지에서 사용)
+│
+├── tailwind.config.mjs      # Tailwind CSS 설정 파일
+└── utils                    # 유틸리티 함수 관련 폴더
+    └── statisticUtils.js      # 통계 관련 유틸리티 함수 파일
+```
 
 <br/><br/>
 
