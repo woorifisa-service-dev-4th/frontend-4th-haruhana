@@ -1,3 +1,5 @@
+<br/>
+
 # ✨ HaruHana - 나만의 학습 설정 프로젝트 ✨
 
 HaruHana는 웹 개발과 CS 공부를 더 쉽고 재미있게 할 수 있도록 도와주는 웹 애플리케이션이에요!🔥 
@@ -6,7 +8,7 @@ HaruHana는 웹 개발과 CS 공부를 더 쉽고 재미있게 할 수 있도록
 매일 꾸준히 학습할 수 있도록 도와주고, 학습 통계를 한눈에 볼 수 있도록 제공해요! 📊💡
 
 
-
+<br/><br/>
 
 # 👨‍👧‍👧 팀 소개
 
@@ -16,13 +18,13 @@ HaruHana는 웹 개발과 CS 공부를 더 쉽고 재미있게 할 수 있도록
 | <img width="130" alt="스크린샷 2025-02-03 오전 3 30 57" src="https://github.com/user-attachments/assets/214d8cd8-1194-42e7-b748-e583170b2836" /> | <img width="130" alt="스크린샷 2025-02-03 오전 3 31 34" src="https://github.com/user-attachments/assets/eb3ff7f3-2fd8-4db4-b6ab-f8bb5f54800e" /> | <img width="130" alt="스크린샷 2025-02-03 오전 3 32 03" src="https://github.com/user-attachments/assets/27d82d2d-fa93-44cf-98f8-4e92c0099db5" /> |
 | 팀장 | 팀원 | 팀원 |
 
-
+<br/><br/>
 
 
 # 🌐 배포
 🔗 [ 하루하나 URL ](http://haruhana.woorifisa.site:3000/)
 
-
+<br/><br/>
 
 
 # 📦 폴더 구조
@@ -60,15 +62,23 @@ HaruHana는 웹 개발과 CS 공부를 더 쉽고 재미있게 할 수 있도록
  ├── postcss.config.mjs    # PostCSS 설정
  ├── pnpm-lock.yaml        # 패키지 종속성 관리 파일
 
- 
+
+ <br/><br/>
 
 # 🖥️ 화면 별 기능
-### 랜딩페이지
+### [ 랜딩페이지 ]
 <img width="301" alt="스크린샷 2025-02-03 오전 3 16 54" src="https://github.com/user-attachments/assets/ede2641b-ae16-4c1d-adaa-340e3d7bd303" />
+ <br/><br/>
+
 
 ### [ 로그인 / 회원가입 ]
 <img width="301" alt="스크린샷 2025-02-03 오전 3 18 18" src="https://github.com/user-attachments/assets/11222049-fe51-4a57-9361-1a8ef5d4373d" />
+ <br/>
+
 <img width="301" alt="스크린샷 2025-02-03 오전 3 18 44" src="https://github.com/user-attachments/assets/706db124-8782-4fcc-b73b-e1a6c9faba18" />
+
+ <br/><br/>
+
 
 ### [ 사용자 정보 입력 모달창 ]
 <img width="301" alt="스크린샷 2025-02-03 오전 3 19 28" src="https://github.com/user-attachments/assets/3de51185-cfb6-4d4e-97ad-c3b5ef9fa059" />
@@ -78,16 +88,26 @@ HaruHana는 웹 개발과 CS 공부를 더 쉽고 재미있게 할 수 있도록
 ⏳ 학습 시간 설정: 하루에 공부할 시간을 정하고 루틴을 만들 수 있어요!
 🔢 문제 수 설정: 원하는 만큼 문제를 풀면서 실력을 쌓을 수 있어요!
 
+ <br/><br/>
+
+
 ### [ 마이페이지 ]
 <img width="438" alt="스크린샷 2025-02-03 오전 3 20 42" src="https://github.com/user-attachments/assets/2c7765f3-f013-447b-a8f5-38a553925228" />
 
 📅 마이페이지: 학습 캘린더를 제공하여 매일매일 학습 기록을 확인할 수 있어요!
 문제 풀이 기록이 마이페이지에서 저장되고, 학습 성취도를 분석할 수 있어요.
 
+
+ <br/><br/>
+
+
 ### [ 차트 통계 분석 ]
 <img width="1103" alt="스크린샷 2025-02-03 오전 3 21 42" src="https://github.com/user-attachments/assets/ded14495-2455-4c1a-b37a-f0b717db5058" />
 
 📊 학습 통계: 내가 푼 문제들의 정답률과 학습 패턴을 분석해줘요!
+
+ <br/><br/>
+
 
 ### [ 오늘의 문제 ]
 <img width="465" alt="스크린샷 2025-02-03 오전 3 25 09" src="https://github.com/user-attachments/assets/5d49473e-376e-4740-97d6-47604117e948" />
@@ -95,14 +115,22 @@ HaruHana는 웹 개발과 CS 공부를 더 쉽고 재미있게 할 수 있도록
 선택한 카테고리의 문제를 자동으로 구성하여 학습을 도와줘요.
 
 
+ <br/><br/>
+
+
 ### [ 문제 리스트 ]
 <img width="301" alt="스크린샷 2025-02-03 오전 3 24 03" src="https://github.com/user-attachments/assets/cb774e2c-1d78-4e4a-857b-79b522c52bca" />
 🏆 문제 리스트: 카테고리별, 난이도별로 문제를 골라 풀 수 있어요!
+
+ <br/><br/>
 
 
 # 📈 LightHouse 성능 지표
 
 -추가 필요-
+
+ <br/><br/>
+
 
 ## Convention
 
@@ -128,6 +156,9 @@ Commit Message는 다음의 형식을 따르며,
 
 이모지는 다음의 표를 참고하여 사용합니다.
 
+ <br/><br/>
+
+
 | **이모지** | **의미**             | **설명**                                               | **예시**                            |
 | ---------- | -------------------- | ------------------------------------------------------ | ----------------------------------- |
 | 🎨         | 코드 구조/형식 개선  | 코드의 기능 변경 없이 리팩토링이나 코드 스타일을 개선. | `🎨 CSS 클래스 이름 리팩토링`       |
@@ -148,6 +179,7 @@ Commit Message는 다음의 형식을 따르며,
 | ➖         | 종속성 제거          | 사용하지 않는 라이브러리나 종속성 제거.                | `➖ jQuery 제거`                    |
 
 
+ <br/><br/>
 
 
 ###📌 HaruHana와 함께 하루하나씩 실력을 키워봐요! 🌱
