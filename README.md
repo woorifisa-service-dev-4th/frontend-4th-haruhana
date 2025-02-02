@@ -37,21 +37,21 @@ HaruHana는 웹 개발과 CS 공부를 더 쉽고 재미있게 할 수 있도록
 
 # 🖥️ 화면 별 기능
 ### [ 랜딩페이지 ]
-<img width="301" alt="스크린샷 2025-02-03 오전 3 16 54" src="https://github.com/user-attachments/assets/ede2641b-ae16-4c1d-adaa-340e3d7bd303" />
+<img width="301"  src="/docs/landing.png" />
  <br/><br/>
 
 
 ### [ 로그인 / 회원가입 ]
-<img width="301" alt="스크린샷 2025-02-03 오전 3 18 18" src="https://github.com/user-attachments/assets/11222049-fe51-4a57-9361-1a8ef5d4373d" />
+<img width="301"  src="/docs/login.png" />
  <br/>
 
-<img width="301" alt="스크린샷 2025-02-03 오전 3 18 44" src="https://github.com/user-attachments/assets/706db124-8782-4fcc-b73b-e1a6c9faba18" />
+<img width="301" src="/docs/logout.png" />
 
  <br/><br/>
 
 
 ### [ 사용자 정보 입력 모달창 ]
-<img width="301" alt="스크린샷 2025-02-03 오전 3 19 28" src="https://github.com/user-attachments/assets/3de51185-cfb6-4d4e-97ad-c3b5ef9fa059" />
+<img width="301" src="docs/modal.png" />
 
 사용자가 처음 학습을 시작할 때, 원하는 학습 스타일을 설정할 수 있는 화면이에요! 📝 <br/>
 🎯 카테고리 선택: 백엔드, 프론트엔드, 네트워크, 데이터베이스, 운영체제, 자료구조 등 원하는 분야를 골라 학습 가능! <br/>
@@ -62,7 +62,7 @@ HaruHana는 웹 개발과 CS 공부를 더 쉽고 재미있게 할 수 있도록
 
 
 ### [ 마이페이지 ]
-<img width="438" alt="스크린샷 2025-02-03 오전 3 20 42" src="https://github.com/user-attachments/assets/2c7765f3-f013-447b-a8f5-38a553925228" />
+<img width="438" src="/docs/mypage.png" />
 
 📅 마이페이지: 학습 캘린더를 제공하여 매일매일 학습 기록을 확인할 수 있어요! <br/>
 문제 풀이 기록이 마이페이지에서 저장되고, 학습 성취도를 분석할 수 있어요.
@@ -72,7 +72,7 @@ HaruHana는 웹 개발과 CS 공부를 더 쉽고 재미있게 할 수 있도록
 
 
 ### [ 차트 통계 분석 ]
-<img width="1103" alt="스크린샷 2025-02-03 오전 3 21 42" src="https://github.com/user-attachments/assets/ded14495-2455-4c1a-b37a-f0b717db5058" />
+<img width="500" src="/docs/statistics.png" />
 
 📊 학습 통계: 내가 푼 문제들의 정답률과 학습 패턴을 분석해줘요!
 
@@ -80,7 +80,7 @@ HaruHana는 웹 개발과 CS 공부를 더 쉽고 재미있게 할 수 있도록
 
 
 ### [ 오늘의 문제 ]
-<img width="465" alt="스크린샷 2025-02-03 오전 3 25 09" src="https://github.com/user-attachments/assets/5d49473e-376e-4740-97d6-47604117e948" />
+<img width="465" src="/docs/todayproblem.png" />
 
 사용자가 설정한 학습 정보에 맞춰 맞춤형 문제를 제공하는 화면이에요! 🎯 <br/>
 선택한 카테고리의 문제를 자동으로 구성하여 학습을 도와줘요.
@@ -90,7 +90,7 @@ HaruHana는 웹 개발과 CS 공부를 더 쉽고 재미있게 할 수 있도록
 
 
 ### [ 문제 리스트 ]
-<img width="301" alt="스크린샷 2025-02-03 오전 3 24 03" src="https://github.com/user-attachments/assets/cb774e2c-1d78-4e4a-857b-79b522c52bca" />
+<img width="301" src="/docs/ProblemList.png" />
 
 🏆 문제 리스트: 카테고리별, 난이도별로 문제를 골라 풀 수 있어요!
 
@@ -119,9 +119,9 @@ GET http://34.64.250.183:8080/api/statistics/summary
 <br/><br/>
 ## 📈 LightHouse 성능 지표
 
-<img width="673" alt="스크린샷 2025-02-03 오전 3 58 52" src="https://github.com/user-attachments/assets/67908ad5-4e53-463a-acdf-c3252d062f66" />
+<img width="673"  src="/docs/lighthouse1.png" />
 
-<img width="694" alt="스크린샷 2025-02-03 오전 4 00 37" src="https://github.com/user-attachments/assets/97ca7548-ff1e-4f63-ac57-ec013d32fd50" />
+<img width="694"  src="/docs/lighthouse2.png" />
 
 
  <br/><br/>
