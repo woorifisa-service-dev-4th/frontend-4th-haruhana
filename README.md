@@ -2,8 +2,8 @@
 
 # ✨ HaruHana - 나만의 학습 설정 프로젝트 ✨
 
-HaruHana는 웹 개발과 CS 공부를 더 쉽고 재미있게 할 수 있도록 도와주는 웹 애플리케이션이에요!🔥 
-사용자는 원하는 카테고리를 선택하고, 학습 시간과 문제 수를 조절하여 딱 맞는 학습 플랜을 세울 수 있어요!
+HaruHana는 웹 개발과 CS 공부를 더 쉽고 재미있게 할 수 있도록 도와주는 웹 애플리케이션이에요!🔥  <br/>
+사용자는 원하는 카테고리를 선택하고, 학습 시간과 문제 수를 조절하여 딱 맞는 학습 플랜을 세울 수 있어요! <br/>
 
 매일 꾸준히 학습할 수 있도록 도와주고, 학습 통계를 한눈에 볼 수 있도록 제공해요! 📊💡
 
@@ -12,10 +12,11 @@ HaruHana는 웹 개발과 CS 공부를 더 쉽고 재미있게 할 수 있도록
 
 # 👨‍👧‍👧 팀 소개
 
+👥 함께하는 팀원들 👫
 
 | [남승현](https://github.com/namsh1125) | [김새봄](https://github.com/saebomnewspring) | [윤예진](https://github.com/yezanee) | 
 | --- | --- | --- |
-| <img width="130" alt="스크린샷 2025-02-03 오전 3 30 57" src="https://github.com/user-attachments/assets/214d8cd8-1194-42e7-b748-e583170b2836" /> | <img width="130" alt="스크린샷 2025-02-03 오전 3 31 34" src="https://github.com/user-attachments/assets/eb3ff7f3-2fd8-4db4-b6ab-f8bb5f54800e" /> | <img width="130" alt="스크린샷 2025-02-03 오전 3 32 03" src="https://github.com/user-attachments/assets/27d82d2d-fa93-44cf-98f8-4e92c0099db5" /> |
+| <img width="180" alt="스크린샷 2025-02-03 오전 3 30 57" src="https://github.com/user-attachments/assets/214d8cd8-1194-42e7-b748-e583170b2836" /> | <img width="180" alt="스크린샷 2025-02-03 오전 3 31 34" src="https://github.com/user-attachments/assets/eb3ff7f3-2fd8-4db4-b6ab-f8bb5f54800e" /> | <img width="180" alt="스크린샷 2025-02-03 오전 3 32 03" src="https://github.com/user-attachments/assets/27d82d2d-fa93-44cf-98f8-4e92c0099db5" /> |
 | 팀장 | 팀원 | 팀원 |
 
 <br/><br/>
@@ -83,9 +84,9 @@ HaruHana는 웹 개발과 CS 공부를 더 쉽고 재미있게 할 수 있도록
 ### [ 사용자 정보 입력 모달창 ]
 <img width="301" alt="스크린샷 2025-02-03 오전 3 19 28" src="https://github.com/user-attachments/assets/3de51185-cfb6-4d4e-97ad-c3b5ef9fa059" />
 
-사용자가 처음 학습을 시작할 때, 원하는 학습 스타일을 설정할 수 있는 화면이에요! 📝
-🎯 카테고리 선택: 백엔드, 프론트엔드, 네트워크, 데이터베이스, 운영체제, 자료구조 등 원하는 분야를 골라 학습 가능!
-⏳ 학습 시간 설정: 하루에 공부할 시간을 정하고 루틴을 만들 수 있어요!
+사용자가 처음 학습을 시작할 때, 원하는 학습 스타일을 설정할 수 있는 화면이에요! 📝 <br/>
+🎯 카테고리 선택: 백엔드, 프론트엔드, 네트워크, 데이터베이스, 운영체제, 자료구조 등 원하는 분야를 골라 학습 가능! <br/>
+⏳ 학습 시간 설정: 하루에 공부할 시간을 정하고 루틴을 만들 수 있어요! <br/>
 🔢 문제 수 설정: 원하는 만큼 문제를 풀면서 실력을 쌓을 수 있어요!
 
  <br/><br/>
@@ -94,7 +95,7 @@ HaruHana는 웹 개발과 CS 공부를 더 쉽고 재미있게 할 수 있도록
 ### [ 마이페이지 ]
 <img width="438" alt="스크린샷 2025-02-03 오전 3 20 42" src="https://github.com/user-attachments/assets/2c7765f3-f013-447b-a8f5-38a553925228" />
 
-📅 마이페이지: 학습 캘린더를 제공하여 매일매일 학습 기록을 확인할 수 있어요!
+📅 마이페이지: 학습 캘린더를 제공하여 매일매일 학습 기록을 확인할 수 있어요! <br/>
 문제 풀이 기록이 마이페이지에서 저장되고, 학습 성취도를 분석할 수 있어요.
 
 
@@ -111,7 +112,8 @@ HaruHana는 웹 개발과 CS 공부를 더 쉽고 재미있게 할 수 있도록
 
 ### [ 오늘의 문제 ]
 <img width="465" alt="스크린샷 2025-02-03 오전 3 25 09" src="https://github.com/user-attachments/assets/5d49473e-376e-4740-97d6-47604117e948" />
-사용자가 설정한 학습 정보에 맞춰 맞춤형 문제를 제공하는 화면이에요! 🎯
+
+사용자가 설정한 학습 정보에 맞춰 맞춤형 문제를 제공하는 화면이에요! 🎯 <br/>
 선택한 카테고리의 문제를 자동으로 구성하여 학습을 도와줘요.
 
 
@@ -120,12 +122,33 @@ HaruHana는 웹 개발과 CS 공부를 더 쉽고 재미있게 할 수 있도록
 
 ### [ 문제 리스트 ]
 <img width="301" alt="스크린샷 2025-02-03 오전 3 24 03" src="https://github.com/user-attachments/assets/cb774e2c-1d78-4e4a-857b-79b522c52bca" />
+
 🏆 문제 리스트: 카테고리별, 난이도별로 문제를 골라 풀 수 있어요!
 
  <br/><br/>
 
+## 🌐 Mock 서버
 
-# 📈 LightHouse 성능 지표
+HaruHana에서는 실제 백엔드 API를 사용하기 전에 프론트엔드 개발을 원활하게 진행할 수 있도록 Mock 서버를 운영하고 있어요.
+
+📍 Mock 서버 정보
+
+Repository: HaruHana Mock Server
+
+기반 기술: Express.js, JSON 서버
+
+Mock API 엔드포인트:
+
+GET http://34.64.250.183:8080/api/statistics/category
+
+GET http://34.64.250.183:8080/api/statistics/weekly
+
+GET http://34.64.250.183:8080/api/statistics/summary
+
+이 API를 사용하면 사용자의 학습 통계를 확인하고, 카테고리별 정답률을 가져올 수 있어요! 🚀
+
+
+## 📈 LightHouse 성능 지표
 
 -추가 필요-
 
