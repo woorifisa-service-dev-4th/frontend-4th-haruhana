@@ -35,7 +35,7 @@ HaruHana는 웹 개발과 CS 공부를 더 쉽고 재미있게 할 수 있도록
 
  <br/><br/>
 
-# 🖥️ 화면 별 기능
+# 🖥️ 화면 구성
 ### [ 랜딩페이지 ]
 <img width="301"  src="/docs/landing.png" />
  <br/><br/>
@@ -96,25 +96,17 @@ HaruHana는 웹 개발과 CS 공부를 더 쉽고 재미있게 할 수 있도록
 
  <br/><br/>
 
-## 🌐 Mock 서버
 
+## 🌐 Mock 서버
 HaruHana에서는 실제 백엔드 API를 사용하기 전에 프론트엔드 개발을 원활하게 진행할 수 있도록 Mock 서버를 운영하고 있어요.
 
-📍 Mock 서버 정보
+📍**Mock 서버 정보**
 
-Repository: HaruHana Mock Server
+Repository: [**Haruhana mock server**](http://api.haruhana.woorifisa.site:8080/) <br/>
+기반 기술: Express.js<br/><br/>
 
-기반 기술: Express.js, JSON 서버
-
-Mock API 엔드포인트:
-
-GET http://34.64.250.183:8080/api/statistics/category
-
-GET http://34.64.250.183:8080/api/statistics/weekly
-
-GET http://34.64.250.183:8080/api/statistics/summary
-
-이 API를 사용하면 사용자의 학습 통계를 확인하고, 카테고리별 정답률을 가져올 수 있어요! 🚀
+아래 링크를 클릭하면 운영 중인 Mock 서버에 접속할 수 있어요!<br/>
+[**👉 Mock 서버 바로가기**](http://api.haruhana.woorifisa.site:8080/)
 
 <br/><br/>
 ## 📈 LightHouse 성능 지표
