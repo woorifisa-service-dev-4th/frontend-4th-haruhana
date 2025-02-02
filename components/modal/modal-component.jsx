@@ -2,10 +2,30 @@
 
 import React, { useState } from "react";
 import dynamic from 'next/dynamic';
+import Dropdown from './drop-down';
+
+const TimeSelector = ({ value, onChange }) => {
+    const options = [
+        { value: '7시', label: '오전 7시' },
+        { value: '8시', label: '오전 8시' },
+        { value: '9시', label: '오전 9시' }
+    ];
+    return <Dropdown value={value} onChange={onChange} options={options} placeholder="학습 시간"/>;
+};
+const QuestionInput = ({ value, onChange }) => {
+    const options = [
+        { value: '1개', label: '1개' },
+        { value: '2개', label: '2개' },
+        { value: '3개', label: '3개' },
+        { value: '4개', label: '4개' },
+        { value: '5개', label: '5개' }
+    ];
+    return <Dropdown value={value} onChange={onChange} options={options} placeholder="문제 수"/>;
+};
+
 
 const CategorySelector = dynamic(() => import('./category-selector'), { ssr: false });
-const TimeSelector = dynamic(() => import('./time-selector'), { ssr: false });
-const QuestionInput = dynamic(() => import('./question-input'), { ssr: false });
+
 
 export default function ModalComponent() {
     const [selectedCategories, setSelectedCategories] = useState([]);
@@ -55,9 +75,13 @@ export default function ModalComponent() {
         }
     };
 
+
+
     return (
-        <div className="bg-white rounded-lg shadow-lg p-7 m-auto w-[450px]">
+        <div className="bg-white rounded-lg shadow-lg p-7 mt-20 m-auto w-[450px]">
             <h1 className="text-2xl font-bold mb-6">학습 설정</h1>
+
+            {/* ✅ 선택된 카테고리가 정상적으로 렌더링되도록 설정 */}
             <CategorySelector
                 selectedCategories={selectedCategories}
                 onSelect={handleCategorySelect}

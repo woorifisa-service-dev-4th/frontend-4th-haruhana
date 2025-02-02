@@ -2,17 +2,15 @@
 import React, { useState } from 'react';
 import Link from 'next/link';
 import Title from '../../components/landing/Title';
+import Modal from '../../components/modal/modal'; // 모달 컴포넌트 추가
+import ModalComponent from '../../components/modal/modal-component'; // 모달 내용
 
 const SignupPage = () => {
     const [name, setName] = useState('');
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [confirmPassword, setConfirmPassword] = useState('');
-
-    const handleCardClick = (path) => {
-        console.log(`Navigating to ${path}`);
-        window.location.href = path;
-    };
+    const [isModalOpen, setIsModalOpen] = useState(false); // 모달 상태 추가
 
     const handleSignup = async (event) => {
         event.preventDefault();
@@ -32,7 +30,7 @@ const SignupPage = () => {
         });
 
         if (res.ok) {
-            handleCardClick('../modal');
+            setIsModalOpen(true); // 회원가입 성공 시 모달 열기
         } else {
             const data = await res.json();
             alert(data.message);
@@ -95,6 +93,11 @@ const SignupPage = () => {
                     </div>
                 </form>
             </div>
+
+            {/* ✅ 회원가입 성공 시 모달 띄우기 */}
+            <Modal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)}>
+                <ModalComponent />
+            </Modal>
         </div>
     );
 };
