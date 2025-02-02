@@ -15,7 +15,7 @@ HaruHana는 웹 개발과 CS 공부를 더 쉽고 재미있게 할 수 있도록
 
 | [남승현](https://github.com/namsh1125) | [김새봄](https://github.com/saebomnewspring) | [윤예진](https://github.com/yezanee) | 
 | --- | --- | --- |
-| <img width="180" alt="스크린샷 2025-02-03 오전 3 30 57" src="https://github.com/user-attachments/assets/214d8cd8-1194-42e7-b748-e583170b2836" /> | <img width="180" alt="스크린샷 2025-02-03 오전 3 31 34" src="https://github.com/user-attachments/assets/eb3ff7f3-2fd8-4db4-b6ab-f8bb5f54800e" /> | <img width="180" alt="스크린샷 2025-02-03 오전 3 32 03" src="https://github.com/user-attachments/assets/27d82d2d-fa93-44cf-98f8-4e92c0099db5" /> |
+| <img width="180" src="/docs/namsh.png" /> | <img width="180" src="/docs/saebom.png" /> | <img width="180" src="/docs/yezanee.png" /> |
 | 팀장 | 팀원 | 팀원 |
 
 <br/><br/>
@@ -29,7 +29,7 @@ HaruHana는 웹 개발과 CS 공부를 더 쉽고 재미있게 할 수 있도록
 
 # 📦 폴더 구조
 
-<img width="500" alt="스크린샷 2025-02-03 오전 4 26 22" src="https://github.com/user-attachments/assets/680efa86-718e-498f-b3be-257ee3fcc834" />
+<img width="500"  src="/docs/folderstructure.png" />
 
 
 
