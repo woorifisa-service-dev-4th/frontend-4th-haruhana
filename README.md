@@ -6,6 +6,8 @@ HaruHana는 웹 개발과 CS 공부를 더 쉽고 재미있게 할 수 있도록
 매일 꾸준히 학습할 수 있도록 도와주고, 학습 통계를 한눈에 볼 수 있도록 제공해요! 📊💡
 
 
+
+
 # 👨‍👧‍👧 팀 소개
 
 
@@ -16,8 +18,11 @@ HaruHana는 웹 개발과 CS 공부를 더 쉽고 재미있게 할 수 있도록
 
 
 
+
 # 🌐 배포
 🔗 [ 하루하나 URL ](http://haruhana.woorifisa.site:3000/)
+
+
 
 
 # 📦 폴더 구조
@@ -54,6 +59,8 @@ HaruHana는 웹 개발과 CS 공부를 더 쉽고 재미있게 할 수 있도록
  ├── tailwind.config.mjs   # Tailwind CSS 설정
  ├── postcss.config.mjs    # PostCSS 설정
  ├── pnpm-lock.yaml        # 패키지 종속성 관리 파일
+
+ 
 
 # 🖥️ 화면 별 기능
 ### 랜딩페이지
