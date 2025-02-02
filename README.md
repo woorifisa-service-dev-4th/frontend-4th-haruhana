@@ -7,7 +7,6 @@ HaruHana는 웹 개발과 CS 공부를 더 쉽고 재미있게 할 수 있도록
 
 매일 꾸준히 학습할 수 있도록 도와주고, 학습 통계를 한눈에 볼 수 있도록 제공해요! 📊💡
 
-
 <br/><br/>
 
 # 👨‍👧‍👧 팀 소개
@@ -29,39 +28,8 @@ HaruHana는 웹 개발과 CS 공부를 더 쉽고 재미있게 할 수 있도록
 
 
 # 📦 폴더 구조
+<img width="550" alt="스크린샷 2025-02-03 오전 3 51 21" src="https://github.com/user-attachments/assets/2707f589-ee54-4dc8-9168-788d9aadf966" />
 
-/frontend-4th-haruhana
- ├── .github               # GitHub 관련 설정
- ├── app                   # 전체 애플리케이션 구조
- │   ├── landing           # 랜딩 페이지
- │   ├── login             # 로그인 페이지
- │   ├── logout            # 로그아웃 처리
- │   ├── mypage            # 마이페이지
- │   ├── problem-list      # 문제 리스트 페이지
- │   ├── questions         # 문제 풀이 관련 컴포넌트
- │   ├── signup            # 회원가입 페이지
- │   ├── statistics        # 학습 통계 페이지
- ├── components            # 재사용 가능한 UI 컴포넌트
- │   ├── chart             # 차트 관련 컴포넌트
- │   ├── landing           # 랜딩 관련 컴포넌트
- │   ├── modal             # 모달 UI 컴포넌트
- │   ├── mypage            # 마이페이지 관련 컴포넌트
- │   ├── problem-list      # 문제 리스트 관련 컴포넌트
- │   ├── problems          # 문제 풀이 관련 컴포넌트
- │   ├── statistics        # 통계 관련 컴포넌트
- │   ├── ui                # 공통 UI 컴포넌트
- ├── public                # 정적 파일 (이미지, 아이콘 등)
- ├── styles                # 스타일 파일 (Tailwind 포함)
- ├── utils                 # 유틸리티 함수 모음
- ├── .dockerignore         # Docker 빌드 제외 파일
- ├── .gitignore            # Git 제외 파일 설정
- ├── Dockerfile            # Docker 배포 설정
- ├── README.md             # 프로젝트 설명 문서
- ├── package.json          # 프로젝트 패키지 설정
- ├── next.config.mjs       # Next.js 설정 파일
- ├── tailwind.config.mjs   # Tailwind CSS 설정
- ├── postcss.config.mjs    # PostCSS 설정
- ├── pnpm-lock.yaml        # 패키지 종속성 관리 파일
 
 
  <br/><br/>
@@ -147,10 +115,13 @@ GET http://34.64.250.183:8080/api/statistics/summary
 
 이 API를 사용하면 사용자의 학습 통계를 확인하고, 카테고리별 정답률을 가져올 수 있어요! 🚀
 
-
+<br/><br/>
 ## 📈 LightHouse 성능 지표
 
--추가 필요-
+<img width="673" alt="스크린샷 2025-02-03 오전 3 58 52" src="https://github.com/user-attachments/assets/67908ad5-4e53-463a-acdf-c3252d062f66" />
+
+<img width="694" alt="스크린샷 2025-02-03 오전 4 00 37" src="https://github.com/user-attachments/assets/97ca7548-ff1e-4f63-ac57-ec013d32fd50" />
+
 
  <br/><br/>
 
@@ -205,7 +176,7 @@ Commit Message는 다음의 형식을 따르며,
  <br/><br/>
 
 
-###📌 HaruHana와 함께 하루하나씩 실력을 키워봐요! 🌱
+#📌 HaruHana와 함께 하루하나씩 실력을 키워봐요! 🌱
 
 
 
