@@ -29,7 +29,7 @@ HaruHana는 웹 개발과 CS 공부를 더 쉽고 재미있게 할 수 있도록
 
 # 📦 폴더 구조
 
-<img width="369" alt="스크린샷 2025-02-03 오전 4 26 22" src="https://github.com/user-attachments/assets/680efa86-718e-498f-b3be-257ee3fcc834" />
+<img width="500" alt="스크린샷 2025-02-03 오전 4 26 22" src="https://github.com/user-attachments/assets/680efa86-718e-498f-b3be-257ee3fcc834" />
 
 
 
