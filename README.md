@@ -176,7 +176,7 @@ Commit Message는 다음의 형식을 따르며,
  <br/><br/>
 
 
-#📌 HaruHana와 함께 하루하나씩 실력을 키워봐요! 🌱
+# 📌 HaruHana와 함께 하루하나씩 실력을 키워봐요! 🌱
 
 
 
