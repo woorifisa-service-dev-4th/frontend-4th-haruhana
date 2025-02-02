@@ -7,9 +7,7 @@ HaruHana는 웹 개발과 CS 공부를 더 쉽고 재미있게 할 수 있도록
 
 매일 꾸준히 학습할 수 있도록 도와주고, 학습 통계를 한눈에 볼 수 있도록 제공해요! 📊💡
 
-<br/><br/>
-
-# 👨‍👧‍👧 팀 소개
+## 👨‍👧‍👧 팀 소개
 
 👥 함께하는 팀원들 👫
 
@@ -18,15 +16,11 @@ HaruHana는 웹 개발과 CS 공부를 더 쉽고 재미있게 할 수 있도록
 | <img width="180" src="/docs/namsh.png" /> | <img width="180" src="/docs/saebom.png" /> | <img width="180" src="/docs/yezanee.png" /> |
 | 팀장                                        | 팀원                                         | 팀원                                          |
 
-<br/><br/>
+## 🌐 배포
 
-# 🌐 배포
+🔗 [하루하나 URL](http://haruhana.woorifisa.site:3000/)
 
-🔗 [ 하루하나 URL ](http://haruhana.woorifisa.site:3000/)
-
-<br/><br/>
-
-# 📦 폴더 구조
+## 📦 폴더 구조
 
 ```text
 .
@@ -84,9 +78,7 @@ HaruHana는 웹 개발과 CS 공부를 더 쉽고 재미있게 할 수 있도록
     └── statisticUtils.js      # 통계 관련 유틸리티 함수 파일
 ```
 
-<br/><br/>
-
-# 🖥️ 화면 구성
+## 🖥️ 화면 구성
 
 ### [ 랜딩페이지 ]
 
@@ -159,15 +151,11 @@ Repository: [**Haruhana mock server**](http://api.haruhana.woorifisa.site:8080/)
 아래 링크를 클릭하면 운영 중인 Mock 서버에 접속할 수 있어요!<br/>
 [**👉 Mock 서버 바로가기**](http://api.haruhana.woorifisa.site:8080/)
 
-<br/><br/>
-
 ## 📈 LightHouse 성능 지표
 
 <img width="673"  src="/docs/lighthouse1.png" />
 
 <img width="694"  src="/docs/lighthouse2.png" />
-
-<br/><br/>
 
 ## Convention
 
@@ -193,8 +181,6 @@ Commit Message는 다음의 형식을 따르며,
 
 이모지는 다음의 표를 참고하여 사용합니다.
 
-<br/><br/>
-
 | **이모지** | **의미**      | **설명**                          | **예시**                 |
 |---------|-------------|---------------------------------|------------------------|
 | 🎨      | 코드 구조/형식 개선 | 코드의 기능 변경 없이 리팩토링이나 코드 스타일을 개선. | `🎨 CSS 클래스 이름 리팩토링`   |
@@ -214,7 +200,5 @@ Commit Message는 다음의 형식을 따르며,
 | 🚚      | 파일/폴더 이동    | 파일이나 폴더의 위치를 변경.                | `🚚 에셋 폴더 이동`          |
 | ➕       | 종속성 추가      | 새로운 라이브러리나 종속성 추가.              | `➕ lodash 종속성 추가`      |
 | ➖       | 종속성 제거      | 사용하지 않는 라이브러리나 종속성 제거.          | `➖ jQuery 제거`          |
-
-<br/><br/>
 
 # 📌 HaruHana와 함께 하루하나씩 실력을 키워봐요! 🌱
