@@ -1,32 +1,29 @@
-import { useQuestionContext } from "@/contexts/QuestionContext";
-
-const QuestionSidebar = () => {
-  const { questions, currentQuestionIndex, setCurrentQuestionIndex } = useQuestionContext();
- 
+const QuestionSidebar = ({
+  questions,
+  currentQuestionIndex,
+  setCurrentQuestionIndex,
+}) => {
   return (
-    <div className="w-[90px] p-4 flex flex-col items-center gap-8 bg-gradient-to-b from-[#E0F4F4] to-[#C5E8E8] shadow-lg">
+    <div className="w-24 bg-white rounded-2xl shadow-lg p-4 flex flex-col items-center gap-4">
       {questions.map((question, index) => (
-        <div
-          key={question.id}
-          className="flex flex-col items-center gap-2.5 w-full"
-        >
+        <div key={question.id} className="w-full">
           <button
             onClick={() => setCurrentQuestionIndex(index)}
-            className={`w-full h-11 mt-4 rounded-full shadow-md flex items-center justify-center text-white font-medium transition-all duration-200
-              ${currentQuestionIndex === index 
-                ? "bg-gradient-to-b from-[#9CD6D7] to-[#6DB1B2]" 
-                : "bg-gradient-to-b from-gray-300 to-gray-400"
-              }`}
+            className={`w-full aspect-square rounded-xl flex flex-col items-center justify-center gap-1 transition-all duration-200 ${
+              currentQuestionIndex === index
+                ? "bg-[#6DB1B2] text-white shadow-lg"
+                : "bg-gray-50 text-gray-600 hover:bg-[#6DB1B2]/10"
+            }`}
           >
-            {index + 1}
+            <span className="text-lg font-semibold">{index + 1}</span>
+            <span className="text-xs">
+              {question.status === "unanswered" ? "•" : "✓"}
+            </span>
           </button>
-          <span className="text-sm font-medium text-gray-500">
-            {question.status === "!unanswered" ? "✓" : "-"}
-          </span>
         </div>
       ))}
     </div>
   );
- };
+};
 
 export default QuestionSidebar;
