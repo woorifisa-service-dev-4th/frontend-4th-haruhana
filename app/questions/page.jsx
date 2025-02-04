@@ -9,11 +9,13 @@ import "../globals.css";
 export default function QuestionPage() {
   return (
     <QuestionProvider>
-      <QuestionHeader />
-      <div className="flex h-screen bg-gray-100">
-        <QuestionSidebar />
-        <div className="flex-1 flex flex-col items-center mt-12">
-          <QuestionArea questionIndex={0} />
+      <div className="min-h-screen bg-gradient-to-br from-[#e6f7f7] via-white to-[#e6f7f7]">
+        <QuestionHeader />
+        <div className="flex p-6 gap-6">
+          <QuestionSidebar />
+          <div className="flex-1 flex flex-col items-center">
+            <QuestionArea />
+          </div>
         </div>
       </div>
     </QuestionProvider>
