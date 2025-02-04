@@ -1,4 +1,4 @@
-const QuestionHeader = () => {
+const QuestionHeader = ({ progress }) => {
   return (
     <header className="sticky top-0 z-50 bg-white/80 backdrop-blur-md border-b border-gray-100 shadow-sm">
       <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
@@ -7,7 +7,7 @@ const QuestionHeader = () => {
             Haruhana
           </h1>
           <div className="text-sm font-medium text-gray-500">
-            진행률: <span className="text-[#6DB1B2]">0%</span>
+            진행률: <span className="text-[#6DB1B2]">{progress}%</span>
           </div>
         </div>
 

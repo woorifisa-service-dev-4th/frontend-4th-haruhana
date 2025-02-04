@@ -1,16 +1,31 @@
 import { useState } from "react";
-import { useQuestionContext } from "@/contexts/QuestionContext";
 
-const QuestionArea = () => {
+const QuestionArea = ({
+  questions,
+  currentQuestionIndex,
+  setCurrentQuestionIndex,
+  handleSubmit,
+  isLoading,
+}) => {
   const [selectedAnswer, setSelectedAnswer] = useState(null);
-  const {
-    questions,
-    currentQuestionIndex,
-    setCurrentQuestionIndex,
-    handleSubmit,
-  } = useQuestionContext();
   const currentQuestion = questions[currentQuestionIndex];
   const isLastQuestion = currentQuestionIndex === questions.length - 1;
+
+  if (isLoading) {
+    return (
+      <div className="w-full max-w-4xl bg-white rounded-2xl shadow-lg p-8 border border-gray-100 flex justify-center items-center">
+        <div className="text-gray-500">문제를 불러오는 중...</div>
+      </div>
+    );
+  }
+
+  if (!currentQuestion) {
+    return (
+      <div className="w-full max-w-4xl bg-white rounded-2xl shadow-lg p-8 border border-gray-100 flex justify-center items-center">
+        <div className="text-gray-500">문제를 찾을 수 없습니다.</div>
+      </div>
+    );
+  }
 
   const answer = (select) => {
     setSelectedAnswer(select);
@@ -158,7 +173,7 @@ const QuestionArea = () => {
               className="w-5 h-5"
               fill="none"
               stroke="currentColor"
-              viewBox="0 0 24 24"
+              viewBox="0 24 24"
             >
               <path
                 strokeLinecap="round"

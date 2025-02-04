@@ -1,9 +1,8 @@
-import { useQuestionContext } from "@/contexts/QuestionContext";
-
-const QuestionSidebar = () => {
-  const { questions, currentQuestionIndex, setCurrentQuestionIndex } =
-    useQuestionContext();
-
+const QuestionSidebar = ({
+  questions,
+  currentQuestionIndex,
+  setCurrentQuestionIndex,
+}) => {
   return (
     <div className="w-24 bg-white rounded-2xl shadow-lg p-4 flex flex-col items-center gap-4">
       {questions.map((question, index) => (
@@ -18,7 +17,7 @@ const QuestionSidebar = () => {
           >
             <span className="text-lg font-semibold">{index + 1}</span>
             <span className="text-xs">
-              {question.status === "!unanswered" ? "✓" : "•"}
+              {question.status === "unanswered" ? "•" : "✓"}
             </span>
           </button>
         </div>
