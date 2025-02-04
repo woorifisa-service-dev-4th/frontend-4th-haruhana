@@ -1,9 +1,9 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import QuestionSidebar from "@/components/problems/QuestionSideBar";
-import QuestionArea from "@/components/problems/QuestionArea";
-import QuestionHeader from "@/components/problems/QuestionHeader";
+import QuestionSidebar from "@/components/questions/QuestionSideBar";
+import QuestionArea from "@/components/questions/QuestionArea";
+import QuestionHeader from "@/components/questions/QuestionHeader";
 import "../globals.css";
 
 export default function QuestionPage() {
