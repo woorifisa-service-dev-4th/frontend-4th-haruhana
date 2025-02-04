@@ -1,9 +1,9 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import SearchBar from "../../components/problem-list/searchBar";
-import FilterBar from "../../components/problem-list/filterBar";
-import ProblemList from "../../components/problem-list/problemList";
+import SearchBar from "../../components/problems/searchBar";
+import FilterBar from "../../components/problems/filterBar";
+import ProblemList from "../../components/problems/problemList";
 import Title from "../../components/landing/Title";
 import { Bell, Settings, Loader } from "lucide-react";
 
