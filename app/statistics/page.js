@@ -3,7 +3,7 @@
 import React, { useState, useEffect } from "react";
 import { Container, Typography } from "@mui/material";
 import { Responsive, WidthProvider } from "react-grid-layout";
-import "@/styles/react-grid.css";
+import "@/app/statistics/react-grid.css";
 import {
   Chart as ChartJS,
   CategoryScale,
