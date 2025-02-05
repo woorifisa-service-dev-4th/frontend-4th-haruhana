@@ -2,7 +2,7 @@
 
 import React, { useState } from "react";
 import dynamic from 'next/dynamic';
-import Dropdown from './drop-down';
+import DropDownMenu from '../ui/drop-down-menu';
 
 const TimeSelector = ({ value, onChange }) => {
     const options = [
@@ -10,7 +10,7 @@ const TimeSelector = ({ value, onChange }) => {
         { value: '8시', label: '오전 8시' },
         { value: '9시', label: '오전 9시' }
     ];
-    return <Dropdown value={value} onChange={onChange} options={options} placeholder="학습 시간"/>;
+    return <DropDownMenu value={value} onChange={onChange} options={options} placeholder="학습 시간"/>;
 };
 const QuestionInput = ({ value, onChange }) => {
     const options = [
@@ -20,7 +20,7 @@ const QuestionInput = ({ value, onChange }) => {
         { value: '4개', label: '4개' },
         { value: '5개', label: '5개' }
     ];
-    return <Dropdown value={value} onChange={onChange} options={options} placeholder="문제 수"/>;
+    return <DropDownMenu value={value} onChange={onChange} options={options} placeholder="문제 수"/>;
 };
 
 
