@@ -2,7 +2,7 @@
 
 import React from "react";
 import { BarChart2, ListChecks, Calendar, CheckCircle } from "lucide-react";
-import { Card, CardContent } from "@/components/ui/card";
+import { Card, CardContent } from "@/components/common/card";
 
 const QuickStats = ({ user }) => {
   const handleCardClick = (path) => {
