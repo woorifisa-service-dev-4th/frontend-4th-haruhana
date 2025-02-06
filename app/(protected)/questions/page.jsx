@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import QuestionSidebar from "@/components/questions/QuestionSideBar";
 import QuestionArea from "@/components/questions/QuestionArea";
 import QuestionHeader from "@/components/questions/QuestionHeader";
-import "../globals.css";
+import "@/app/globals.css";
 
 export default function QuestionPage() {
   const [questions, setQuestions] = useState([]);
