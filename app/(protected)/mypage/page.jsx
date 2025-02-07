@@ -1,7 +1,6 @@
 import ProfileSection from "@/components/mypage/profileSection";
 import StudyCalendar from "@/components/mypage/study-calendar";
 import QuickStats from "@/components/mypage/quock-stats";
-import RecentActivity from "@/components/mypage/recent-activity";
 
 export default function MyPage() {
   return (
@@ -13,7 +12,6 @@ export default function MyPage() {
         </div>
         <QuickStats />
       </div>
-      <RecentActivity />
     </main>
   );
 }

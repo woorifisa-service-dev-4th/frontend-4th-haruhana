@@ -1,9 +1,9 @@
 "use client";
 
-import { Bell } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
+import NotificationsDropdown from "./notifications-menu";
 
 export default function Header() {
   const pathname = usePathname();
@@ -36,10 +36,7 @@ export default function Header() {
 
           {/* 우측 아이콘 및 프로필 */}
           <div className="flex items-center gap-8">
-            <div className="relative">
-              <Bell className="w-7 h-7 text-gray-600 cursor-pointer hover:text-[#6DB1B2] transition-colors" />
-              <span className="absolute -top-1 -right-1 w-2 h-2 bg-red-500 rounded-full"></span>
-            </div>
+            <NotificationsDropdown />
             <Link href="/mypage" className="group">
               <div className="w-12 h-12 rounded-full overflow-hidden ring-2 ring-gray-100 transition-all group-hover:ring-[#6DB1B2]">
                 <Image
