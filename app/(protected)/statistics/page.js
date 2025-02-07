@@ -116,18 +116,9 @@ export default function StatisticsPage() {
 
   return (
     <div className="min-h-screen bg-gray-50">
-      {/* Header */}
-      <header className="bg-[#6DB1B2] text-white py-6">
-        <div className="container mx-auto px-4">
-          <div className="flex items-center justify-between">
-            <h1 className="text-2xl font-bold">나의 학습통계</h1>
-            <div className="flex gap-4">
-              <Bell className="w-6 h-6 cursor-pointer hover:opacity-80" />
-              <Settings className="w-6 h-6 cursor-pointer hover:opacity-80" />
-            </div>
-          </div>
-        </div>
-      </header>
+      <div className="mx-auto px-16 pt-6">
+        <h1 className="text-2xl font-bold text-gray-800">나의 학습 통계</h1>
+      </div>
 
       {/* 나의 학습 통계 */}
       <Container maxWidth={false} disableGutters sx={{ p: 3, height: "100vh" }}>
