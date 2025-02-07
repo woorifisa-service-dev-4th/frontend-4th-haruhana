@@ -1,10 +1,9 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import SearchBar from "../../components/problems/searchBar";
-import FilterBar from "../../components/problems/filterBar";
-import ProblemList from "../../components/problems/problemList";
-import Title from "../../components/landing/Title";
+import SearchBar from "../../../components/problems/searchBar";
+import FilterBar from "../../../components/problems/filterBar";
+import ProblemList from "../../../components/problems/problemList";
 import { Bell, Settings, Loader } from "lucide-react";
 
 const ProblemListPage = () => {
@@ -63,17 +62,6 @@ const ProblemListPage = () => {
 
   return (
     <div className="min-h-screen bg-gray-50">
-      <header className="bg-[#6DB1B2] text-white py-6 shadow-sm">
-        <div className="container mx-auto px-4">
-          <div className="flex items-center justify-between">
-            <h1 className="text-2xl font-bold">문제 리스트</h1>
-            <div className="flex gap-4">
-              <Bell className="w-6 h-6 cursor-pointer hover:opacity-80 transition-opacity" />
-              <Settings className="w-6 h-6 cursor-pointer hover:opacity-80 transition-opacity" />
-            </div>
-          </div>
-        </div>
-      </header>
       <main className="container mx-auto px-4 py-8">
         <div className="max-w-5xl mx-auto">
           <SearchBar onSearch={handleSearch} />

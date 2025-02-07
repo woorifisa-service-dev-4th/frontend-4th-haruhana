@@ -1,8 +1,8 @@
 "use client";
 import { useState } from "react";
 import Link from "next/link";
-import Modal from "../../components/modal/modal"; // 모달 컴포넌트 추가
-import ModalComponent from "../../components/modal/modal-component"; // 모달 내용
+import Modal from "../../../components/modal/modal"; // 모달 컴포넌트 추가
+import ModalComponent from "../../../components/modal/modal-component"; // 모달 내용
 import Image from "next/image"; // Image import 추가
 
 const SignupPage = () => {
